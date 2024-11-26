@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Sandbox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <!-- <div id="app"></div> -->
+    <section class="container">
+      <header>
+        <h1>Venia</h1>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Electronics</a></li>
+            <li><a href="#">Jewellery</a></li>
+          </ul>
+        </nav>
+        <div class="shopping-cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708"/>
+          </svg>
+        </div>
+      </header>
+      <section class="main">
+        <aside>
+            <h3>Filters</h3>
+            <nav class="side-filter-nav">
+              <ul>
+                <li class="title">Categories</li>
+                <li class="field">
+                  <div class="checkbox">
+                    <input type="checkbox" tabindex="0" name="categories" value="jewelery" id="category_jewellery">
+                    <label for="category_jewellery">Jewellery</label>
+                  </div>
+                </li>
+                <li class="field">
+                  <div class="checkbox">
+                    <input type="checkbox" tabindex="1" name="categories" value="electronics" id="category_electronics">
+                    <label for="category_electronics">Electronics</label>
+                  </div>
+                </li>
+                <li class="field">
+                  <div class="checkbox">
+                    <input type="checkbox" tabindex="2" name="categories" value="mensclothing" id="category_men">
+                    <label for="category_men">Men's Clothing</label>
+                  </div>
+                </li>
+                <li class="field">
+                  <div class="checkbox">
+                    <input type="checkbox" tabindex="3" name="categories" value="womensclothing" id="category_women">
+                    <label for="category_women">Women's Clothing</label>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+            <h3>Sort</h3>
+            <select id="productSort"><option value="-1">Sort</option><option value="sortByPrice">Sort by Price</option></select>
+        </aside>
+        <main id="productList" class="shimmer">
+          <button type="button" id="loadMoreData">Load More</button>
+        </main>
+      </section>
+      <footer>
+        Footer
+      </footer>
+    </section>
+    <script type="module" src="./script/main.js"></script>
+  </body>
+</html>
