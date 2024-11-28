@@ -87,10 +87,6 @@ section.main .products .item .price {
     section.main {
         margin-top: 70px;
     }
-    section.main aside {
-        display: none;
-    }
-
     section.main .products {
         width: 100%;
         flex-direction: column;
