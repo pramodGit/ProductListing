@@ -39,8 +39,10 @@
         <article><h1>Mens's <br /> Outerwear<small>&nbsp;</small></h1></article>
       </section>
       <section class="main">
-        <aside>
-            <h3>Filters</h3>
+        <aside id="sideBar">
+            <h3>Filters <svg id="sideBarCloseIcon" class="menu-drawer-close-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+              <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+            </svg></h3>
             <nav class="side-filter-nav">
               <ul>
                 <li class="title">Categories</li>
@@ -70,14 +72,14 @@
                 </li>
               </ul>
             </nav>
-            
         </aside>
+        <button id="maskLayer" class="mask hidden"></button>
         <main class="products shimmer">
           <article class="control-panel">
             <div class="info"><h5 id="productCount">20</h5>Result</div>
             <div class="control-panel-buttons">
               <div>
-                <svg class="filter-button" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
+                <svg id="filterButton" class="filter-button" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
                   <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
                 </svg>
                 Filters
