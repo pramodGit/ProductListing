@@ -53,7 +53,7 @@ productSort.addEventListener("change", (event) => {
     //console.log(productData.length);
     loadProducts(productData, null);
     let productCount = document.getElementById("productCount");
-    productCount.textContent = producData.length;
+    productCount.textContent = productData.length;
 });
 /**Menu Drawer */
 let menuDrawerCloseIcon = document.getElementById("menuDrawerCloseIcon");
