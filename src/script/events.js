@@ -57,17 +57,40 @@ productSort.addEventListener("change", (event) => {
 });
 /**Menu Drawer */
 let menuDrawerCloseIcon = document.getElementById("menuDrawerCloseIcon");
-//console.log(menuDrawerIcon[0]);
 menuDrawerCloseIcon.addEventListener("click", (event) => {
-    //console.log(event.currentTarget);
     const mainNav = document.getElementById("mainNav");
     mainNav.classList.add("hidden", "visiblity");
+    const maskLayer = document.getElementById("maskLayer");
+    maskLayer.classList.add("hidden");
 });
 let menuDrawerIcon = document.getElementById("menuDrawerIcon");
 menuDrawerIcon.addEventListener("click", (event) => {
-    //console.log(event.currentTarget);
+    const maskLayer = document.getElementById("maskLayer");
+    maskLayer.classList.remove("hidden");
     const mainNav = document.getElementById("mainNav");
     mainNav.classList.remove("hidden", "visiblity");
+});
+const filterButton = document.getElementById("filterButton");
+filterButton.addEventListener('click', (event) => {
+  const sideBar = document.getElementById("sideBar");
+  sideBar.classList.add("visiblity");
+  const maskLayer = document.getElementById("maskLayer");
+  maskLayer.classList.remove("hidden");
+});
+const maskLayer = document.getElementById("maskLayer");
+maskLayer.addEventListener('click', (event) => {
+  event.target.classList.add("hidden");
+  const sideBar = document.getElementById("sideBar");
+  sideBar.classList.remove("visiblity");
+  const mainNav = document.getElementById("mainNav");
+  mainNav.classList.add("hidden", "visiblity");
+});
+const sideBarCloseIcon = document.getElementById("sideBarCloseIcon");
+sideBarCloseIcon.addEventListener("click", (event) => {
+  const sideBar = document.getElementById("sideBar");
+  sideBar.classList.remove("visiblity");
+  const maskLayer = document.getElementById("maskLayer");
+  maskLayer.classList.add("hidden");
 });
 /** */
 // products.filter((product) => {
