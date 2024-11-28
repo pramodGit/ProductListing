@@ -1,0 +1,129 @@
+@keyframes shimmer {
+    to {
+        background-position-x: 0%
+    }
+}
+section.main {
+    margin-top: 10px;
+}
+section.main .products {
+    width: 77%;
+}
+section.main .products article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 10px;
+}
+section.main .products article.control-panel {
+    flex-wrap: nowrap;
+    /* border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fcfcfc; */
+    margin: 10px 0;
+}
+.control-panel .info {
+    flex-basis: 48%;
+    font-size: 1.2rem;
+    text-align: left;
+}
+.control-panel .options {
+    flex-basis: 51%;
+    font-size: 1.2rem;
+    text-align: right;
+}
+.control-panel h5 {
+    display: inline-block;
+    font-size: 1.1em;
+    padding: 10px 5px 10px;
+}
+section.main .products .item {
+    display: grid;
+    flex: 1 0 30%;
+    justify-content:flex-start;
+    align-items:flex-start;
+    flex-direction: column;
+    margin: 5px;
+    height: 140px;
+}
+section.main .products .item.shimmer {
+    background: linear-gradient(-45deg, #e1e0e8 40%, #f8f7fd 50%, #d2d9f5 60%);
+    background-size: 300%;
+    background-position-x: 100%;
+    animation: shimmer 1s infinite linear;
+}
+
+section.main .products .item .image {
+    width: 100px;
+    height: 105px;
+}
+section.main .products .item .price {
+    display: flex;
+    justify-content: left;
+}
+
+/* #loadMoreData {
+    height: 30px;
+    width: 100%;
+    background-color: #7292f4;
+    cursor: pointer;
+    border: 0;
+    padding: .6rem 0;
+}
+#productList.shimmer #loadMoreData {
+    display:none;
+} */
+/*** Middle Panel [END] ***/
+@media (min-width: 768) {
+    section.main {
+        margin-top: 20px;
+    }
+    .control-panel-buttons {
+        display: none;
+    }
+}
+@media only screen and (max-width: 768px) {
+
+    section.main {
+        margin-top: 70px;
+    }
+    section.main aside {
+        display: none;
+    }
+
+    section.main .products {
+        width: 100%;
+        flex-direction: column;
+    }
+    section.main .products article.control-panel {
+        flex-direction: column;
+        padding: 0 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    section.main .products .item {
+        flex: 1 0 30%;
+    }
+    .control-panel-buttons {
+        flex-basis: 100%;
+        display: flex;
+    }
+    .control-panel-buttons > div {
+        margin: 0 20px;
+    }
+    .control-panel-buttons svg {
+        vertical-align: middle;
+    }
+    .control-panel .info {
+        flex-basis: 100%;
+    }
+    .control-panel .options {
+        display: none;
+    }
+    
+}
+@media only screen and (max-width: 640px) {
+    section.main .products .item {
+        flex: 1 0 40%;
+    }
+}

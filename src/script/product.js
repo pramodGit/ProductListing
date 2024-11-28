@@ -21,18 +21,20 @@ export default function loadProducts (dataArray, limit) {
     } else {
         finalData = dataArray;
     }
+    //console.log(finalData);
     let main = document.getElementById("productList");
+    main.innerHTML = '';
     main.classList.remove("shimmer");
     finalData.forEach((d, i) => {
         let div = document.createElement('div');
-        div.className = 'item';
+        div.className = 'item shimmer';
         let img = createHTMLElement('img', null, {'class': 'image', 'alt': d.title, 'src': d.image});
         let figure = document.createElement('figure');
         figure.appendChild(img);
         let figcaption = createHTMLElement('figcaption', d.title, {'class': 'title', 'title': d.title});
         figure.appendChild(figcaption);
         div.appendChild(figure);
-        
+        div.classList.remove("shimmer");
         let priceTag = createHTMLElement('div', d.price, {'class': 'price'});
         div.appendChild(priceTag);
         main.prepend(div);

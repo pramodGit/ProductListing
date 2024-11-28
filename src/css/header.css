@@ -1,0 +1,92 @@
+/*** Header Styling [START] ***/
+header {
+    background-color: #2e17d4;
+    display: grid;
+    grid-auto-flow: column;
+}
+header > h1 {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    font-size: 2rem;
+    color: #fff;
+}
+header > nav {
+    grid-row-start: 1;
+    grid-column-start: 5;
+}
+header > nav.visiblity {
+    display: grid;
+}
+    header .navigation {
+        display: flex;
+        flex-direction: row;
+    }
+        header .navigation li {
+            justify-content: center;
+            padding: 0 5px;
+            margin: 0 20px;
+        }
+        header .navigation li.active {
+            border-bottom: 1px solid #fff;
+        }
+        header .navigation li a {
+            font-size: 1.2rem;
+            text-decoration: none;
+            display: inline-flex;
+            color: #fff;
+        }
+header .shopping-cart {
+    grid-column-start: 10;
+    color: #fff;
+}
+.menu-drawer-icon {
+    cursor: pointer;
+    margin: -5px 0 0 20px;
+}
+header .navigation li.main-menu {
+    font-size: 1.2rem;
+    padding-top: 5px;
+    background-color: #fcfcfc;
+}
+.menu-drawer-close-icon {
+    vertical-align: middle;
+    margin-right: 15px;
+}
+/*** Header Styling [END] ***/
+@media (min-width: 768px) {
+    .menu-drawer-icon,
+    .main-menu {
+        display: none;
+    }
+}
+@media only screen and (max-width: 768px) {
+    header > h1 {
+        grid-column-start: 5;
+    }
+    header > nav {
+        background-color: #fff;
+        width: 300px; 
+        position: fixed;
+        top: 0;
+        z-index: 2;
+    }
+    header > nav.visiblity {
+        display: none;
+    }
+    header .navigation {
+        display: grid;
+        grid-auto-rows: 30px;
+    }
+    header .navigation li {
+        grid-template-columns: 6rem 1fr 4rem;
+        padding: 10px 25px;
+        margin: 0;
+        border-bottom: 1px solid #ccc;
+    }
+    header .navigation li a {
+        color: #000;
+    }
+    header .navigation li.active {
+        border-bottom: 1px solid #ccc;
+    }
+}
